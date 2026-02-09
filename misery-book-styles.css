@@ -1,0 +1,383 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Roboto+Mono:wght@300;400;500&display=swap');
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Roboto Mono', monospace;
+  background: #000000;
+  color: #e6ffe9;
+  overflow-x: hidden;
+  line-height: 1.6;
+}
+
+/* Decorative data nodes */
+.market-decor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.data-node {
+  position: absolute;
+  background: rgba(0, 255, 65, 0.1);
+  border-radius: 50%;
+  animation: float 20s ease-in-out infinite;
+}
+
+.node-1 { width: 12px; height: 12px; top: 20%; right: 10%; animation-delay: 0s; }
+.node-2 { width: 8px; height: 8px; top: 60%; left: 15%; animation-delay: -5s; }
+.node-3 { width: 16px; height: 16px; top: 80%; right: 25%; animation-delay: -10s; }
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px) scale(1); opacity: 0.3; }
+  50% { transform: translateY(-20px) scale(1.2); opacity: 0.7; }
+}
+
+/* Header - Nexus style */
+header {
+  text-align: center;
+  padding: 40px 20px 20px;
+  position: relative;
+  z-index: 10;
+}
+
+header nav {
+  display: inline-block;
+  margin-bottom: 12px;
+}
+
+header nav a {
+  color: #00ff41;
+  text-decoration: none;
+  font-weight: 700;
+  padding: 8px 20px;
+  border: 1px solid rgba(0, 255, 65, 0.5);
+  border-radius: 25px;
+  transition: all 0.3s ease;
+}
+
+header nav a:hover {
+  background: #00ff41;
+  color: #000;
+  box-shadow: 0 0 20px rgba(0, 255, 65, 0.6);
+}
+
+.page-title {
+  font-family: 'Orbitron', monospace;
+  font-size: 3rem;
+  font-weight: 900;
+  color: #00ff41;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.part2-title {
+  color: #ff4444;
+}
+
+/* Market Card - Nexus planet-card style */
+.market-card {
+  max-width: 1100px;
+  margin: 60px auto;
+  padding: 40px;
+  background: rgba(5, 5, 5, 0.9);
+  border: 1px solid rgba(0, 255, 65, 0.3);
+  border-radius: 24px;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.9);
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 40px;
+  position: relative;
+  z-index: 10;
+}
+
+.part1-card { border-color: rgba(0, 255, 65, 0.6); }
+.part2-card { border-color: rgba(255, 68, 68, 0.6); }
+
+/* Left: Image - Perfect fit, NO GLOW */
+.market-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.market-image img {
+  width: 100%;
+  max-width: 300px;
+  height: 420px;
+  object-fit: cover;
+  border-radius: 20px;
+  border: 3px solid rgba(0, 255, 65, 0.8);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8);
+}
+
+.part2-card .market-image img {
+  border-color: rgba(255, 68, 68, 0.8);
+}
+
+/* Right: Info */
+.market-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.market-info h2 {
+  font-family: 'Orbitron', monospace;
+  font-size: 1.8rem;
+  color: #00ff41;
+  margin-bottom: 8px;
+  letter-spacing: 0.1em;
+}
+
+.part2-card .market-info h2 {
+  color: #ff4444;
+}
+
+.market-tagline {
+  color: #9fa8b0;
+  font-size: 0.9rem;
+  margin-bottom: 24px;
+  font-weight: 500;
+}
+
+.book-item {
+  flex: 1;
+}
+
+.book-item h3 {
+  font-family: 'Orbitron', monospace;
+  font-size: 1.4rem;
+  color: #00ff41;
+  margin-bottom: 16px;
+  letter-spacing: 0.05em;
+}
+
+.part2-card .book-item h3 {
+  color: #ff4444;
+}
+
+.book-item p {
+  margin-bottom: 16px;
+  color: #c2ffd5;
+}
+
+.book-item p:last-child {
+  margin-bottom: 0;
+}
+
+.genre-tag {
+  font-style: italic;
+  color: #9fa8b0;
+  margin: 20px 0;
+  padding: 12px;
+  background: rgba(0, 255, 65, 0.05);
+  border-left: 3px solid rgba(0, 255, 65, 0.4);
+}
+
+.buy-btn {
+  display: inline-block;
+  margin-top: 24px;
+  padding: 14px 32px;
+  background: linear-gradient(135deg, #00ff41, #00c853);
+  color: #000;
+  text-decoration: none;
+  font-weight: 800;
+  font-size: 1rem;
+  border-radius: 999px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  box-shadow: 0 12px 35px rgba(0, 255, 65, 0.4);
+  transition: all 0.3s ease;
+}
+
+.buy-btn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 50px rgba(0, 255, 65, 0.6);
+}
+
+.green-btn { background: linear-gradient(135deg, #00ff41, #00c853); }
+.red-btn { 
+  background: linear-gradient(135deg, #ff4444, #ff6b6b); 
+  box-shadow: 0 12px 35px rgba(255, 68, 68, 0.5); 
+}
+.red-btn:hover { box-shadow: 0 20px 50px rgba(255, 68, 68, 0.7); }
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 40px 20px;
+  color: #7fd89a;
+  font-size: 0.9rem;
+  border-top: 1px solid rgba(0, 255, 65, 0.3);
+  margin-top: 60px;
+}
+
+/* Responsive - Mobile stacks */
+@media (max-width: 900px) {
+  .market-card {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding: 30px 20px;
+    margin: 40px auto;
+  }
+  
+  .page-title {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .page-title {
+    font-size: 1.8rem;
+    letter-spacing: 0.15em;
+  }
+}
+
+/* EXACT misery-market.html back button positioning */
+header {
+  padding: 16px 20px 0 20px;
+}
+
+header nav {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 12px;
+}
+
+header nav a {
+  display: inline-block;
+  background: linear-gradient(135deg, #00ff41, #00c853);
+  color: #000000;
+  text-decoration: none;
+  padding: 8px 18px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  border-radius: 999px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  box-shadow: 0 6px 20px rgba(0, 255, 65, 0.4);
+  transition: all 0.2s ease;
+}
+
+header nav a:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 28px rgba(0, 255, 65, 0.7);
+}
+
+.page-title {
+  font-family: 'Orbitron', monospace;
+  font-size: 3rem;
+  font-weight: 900;
+  color: #00ff41;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  margin: 12px 0 0 0;
+  text-align: center;
+}
+/* PART 2 RED THEME */
+.part2-title,
+.part2-card .market-info h2,
+.part2-card .book-item h3 {
+  color: #ff4444 !important;
+}
+
+.part2-card {
+  border-color: rgba(255, 68, 68, 0.6);
+}
+
+.part2-card .market-image img {
+  border-color: rgba(255, 68, 68, 0.8);
+}
+
+.part2-card header nav a {
+  background: linear-gradient(135deg, #ff4444, #ff6b6b);
+  box-shadow: 0 6px 20px rgba(255, 68, 68, 0.4);
+}
+
+.part2-card header nav a:hover {
+  box-shadow: 0 10px 28px rgba(255, 68, 68, 0.7);
+  transform: translateY(-2px);
+}
+/* PART 2 FULL RED THEME */
+.part2-card {
+  border-color: rgba(255, 68, 68, 0.6);
+}
+
+.part2-card .market-image img {
+  border-color: rgba(255, 68, 68, 0.8);
+}
+
+.part2-card .page-title,
+.part2-card .market-info h2,
+.part2-card .book-item h3,
+.part2-card .book-item p,
+.part2-card .genre-tag {
+  color: #ff6b6b !important;
+}
+
+.part2-card header nav a {
+  background: linear-gradient(135deg, #ff4444, #ff6b6b);
+  color: #000;
+  box-shadow: 0 6px 20px rgba(255, 68, 68, 0.4);
+}
+
+.part2-card header nav a:hover {
+  box-shadow: 0 10px 28px rgba(255, 68, 68, 0.7);
+  transform: translateY(-2px);
+}
+
+/* Part 2 Next Button - Top Right (Part 1 page only) */
+.next-btn {
+  display: inline-block;
+  background: linear-gradient(135deg, #00ff41, #00c853);
+  color: #000000;
+  text-decoration: none;
+  padding: 8px 18px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  border-radius: 999px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  box-shadow: 0 6px 20px rgba(0, 255, 65, 0.4);
+  transition: all 0.2s ease;
+  margin-left: auto;
+}
+
+.next-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 28px rgba(0, 255, 65, 0.7);
+}
+
+header nav {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  justify-content: space-between;
+}
+.next-btn.part2-btn {
+  background: linear-gradient(135deg, #ff4444, #ff6b6b) !important;
+  box-shadow: 0 6px 20px rgba(255, 68, 68, 0.4) !important;
+}
+
+.next-btn.part2-btn:hover {
+  box-shadow: 0 10px 28px rgba(255, 68, 68, 0.7) !important;
+}
+.next-btn.part2-btn {
+  background: linear-gradient(135deg, #ff4444, #ff6b6b) !important;
+  box-shadow: 0 6px 20px rgba(255, 68, 68, 0.4) !important;
+  border: none !important;  /* Removes any green border/outline */
+  outline: none !important;
+}
+
+.next-btn.part2-btn:hover {
+  background: linear-gradient(135deg, #ff5555, #ff7d7d) !important;
+  box-shadow: 0 10px 28px rgba(255, 68, 68, 0.7) !important;
+  border: none !important;
+  outline: none !important;
+}

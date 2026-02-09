@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact | Gourab Koley</title>
+  <link rel="stylesheet" href="contact-styles.css" />
+</head>
+<body>
+  <main class="contact-container">
+    <a href="index.html" class="back-link">← Back</a>
+
+    <section class="contact-box">
+      <h1>Contact Me</h1>
+      <p class="subtitle">
+        Send questions, feedback, or leave your email to get notified about future book releases.
+      </p>
+
+      <form action="https://formspree.io/f/xdkqzzrz" method="POST" class="contact-form">
+        <label>
+          Your Name
+          <input type="text" name="name" required />
+        </label>
+
+        <label>
+          Your Email
+          <input type="email" name="email" required />
+        </label>
+
+        <label>
+          Your Message
+          <textarea name="message" rows="5" required></textarea>
+        </label>
+
+        <label class="checkbox-row">
+          <input type="checkbox" name="newsletter" checked />
+          <span>Notify me about future books and recommendations</span>
+        </label>
+
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+  </main>
+</body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Screen Stories | Gourab Koley</title>
+  <link rel="stylesheet" href="influences-styles.css" />
+</head>
+<body>
+  <header class="inf-header">
+  <a href="index.html" class="inf-back">← Back</a>
+  <h1>Screen Stories That Shape My Worlds</h1>
+  <p class="inf-subtitle">
+    One influence at a time—tap Next to cycle through.
+  </p>
+</header>
+
+  <main class="carousel">
+    <!-- Slides -->
+    <div class="slides">
+      <!-- 1: Severance -->
+      <article class="slide current" aria-hidden="false">
+        <div class="poster">
+          <img src="severance-poster.jpg" alt="Severance poster" />
+        </div>
+        <div class="copy">
+          <h2>Severance</h2>
+          <p class="meta">TV Series • Psychological Sci‑Fi • Rating: <span class="rating">9.5 / 10</span></p>
+          <p class="blurb">
+            A show that weaponizes memory like a scalpel. The split consciousness between “innie” and “outie” will stick with me forever.
+          </p>
+        </div>
+      </article>
+
+      <!-- 2: Lost -->
+      <article class="slide" aria-hidden="true">
+        <div class="poster">
+          <img src="lost-poster.jpg" alt="Lost poster" />
+        </div>
+        <div class="copy">
+          <h2>Lost</h2>
+          <p class="meta">TV Series • Mystery / Ensemble • Rating: <span class="rating">9.4 / 10</span></p>
+          <p class="blurb">
+            Taught me to juggle timelines and character backstories without losing the heart (My personal fav).
+          </p>
+        </div>
+      </article>
+
+      <!-- 3: The Wire -->
+      <article class="slide" aria-hidden="true">
+        <div class="poster">
+          <img src="The-Wire-poster.jpg" alt="The Wire poster" />
+        </div>
+        <div class="copy">
+          <h2>The Wire</h2>
+          <p class="meta">TV Series • Systems Drama • Rating: <span class="rating">9.2 / 10</span></p>
+          <p class="blurb">
+            A masterclass in institutions and incentives—directly influencing the economic logic behind The Misery Market.
+          </p>
+        </div>
+      </article>
+
+      <!-- 4: Berserk 1998-->
+      <article class="slide" aria-hidden="true">
+        <div class="poster">
+          <img src="berserk-poster.jpg" alt="Berserk poster" />
+        </div>
+        <div class="copy">
+          <h2>Berserk 1998</h2>
+          <p class="meta">Anime • Dark Fantasy • Rating: <span class="rating">9.8 / 10</span></p>
+          <p class="blurb">
+            Where raw emotion meets cosmic horror; its weight and consequence shape how far I push characters.
+          </p>
+        </div>
+      </article>
+    </div>
+
+    <!-- Controls -->
+    <button class="nav prev" aria-label="Previous review">‹</button>
+    <button class="nav next" aria-label="Next review">›</button>
+  </main>
+
+  <script>
+  const slides = Array.from(document.querySelectorAll('.slide'));
+  const nextBtn = document.querySelector('.next');
+  const prevBtn = document.querySelector('.prev');
+  let i = 0;
+
+  function show(index) {
+    slides.forEach((s, idx) => {
+      if (idx === index) {
+        s.classList.add('current');
+        s.classList.remove('hidden');
+        s.setAttribute('aria-hidden', 'false');
+      } else {
+        s.classList.remove('current');
+        s.classList.add('hidden');
+        s.setAttribute('aria-hidden', 'true');
+      }
+    });
+    i = index;
+  }
+
+  nextBtn.addEventListener('click', () =>
+    show((i + 1 + slides.length) % slides.length)
+  );
+
+  prevBtn.addEventListener('click', () =>
+    show((i - 1 + slides.length) % slides.length)
+  );
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowRight') show((i + 1 + slides.length) % slides.length);
+    if (e.key === 'ArrowLeft') show((i - 1 + slides.length) % slides.length);
+  });
+</script>
+</body>
+</html>

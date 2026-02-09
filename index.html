@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Gourab Koley - Sci-Fi Author</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <button class="scroll-top-btn" aria-label="Back to top">↑</button>
+  
+  <header>
+    <h1>GOURAB KOLEY</h1>
+    <nav>
+      <a href="#books">My Books</a>
+      <a href="nexus-saga.html">The Nexus Saga</a>
+      <a href="misery-market.html">The Misery Market</a>
+      <a href="#about">About Me</a>
+      <a href="contact.html">Contact</a>
+    </nav>   
+  </header>
+
+  <main>
+    <section id="books">
+      <h2>My Books</h2>
+      <!-- Nexus Saga 3D row -->
+      <div class="series">
+        <div class="series-header">
+          <h3>The Nexus Saga</h3>
+          <a class="series-link" href="nexus-saga.html">Learn More →</a>
+        </div>
+        <div class="book-mockups">
+          <div class="book-card">
+            <img src="Untitled-design-1.png" alt="Nexus: Threads of Genesis 3D mockup" />
+            <p class="book-title">Threads of Genesis</p>
+            <a class="book-btn" href="https://a.co/d/aNNlTrn" target="_blank" rel="noopener">Buy on Amazon</a>
+          </div>
+          <div class="book-card">
+            <img src="Untitled-design-2.png" alt="Nexus: Symphony of Minds 3D mockup" />
+            <p class="book-title">Symphony of Minds</p>
+            <a class="book-btn" href="https://a.co/d/hcpjwst" target="_blank" rel="noopener">Buy on Amazon</a>
+          </div>
+          <div class="book-card">
+            <img src="Untitled-design-3.png" alt="Nexus: The Labyrinth Within 3D mockup" />
+            <p class="book-title">The Labyrinth Within</p>
+            <a class="book-btn" href="https://a.co/d/1C2X3UK" target="_blank" rel="noopener">Buy on Amazon</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Misery Market 3D row -->
+      <div class="series">
+        <div class="series-header">
+          <h3>The Misery Market</h3>
+          <a class="series-link" href="misery-market.html">Learn More →</a>
+        </div>
+        <div class="book-mockups">
+          <div class="book-card">
+            <img src="Untitled-design-4.png" alt="The Misery Market Part One 3D mockup" />
+            <p class="book-title">The Misery Market: Part 1</p>
+            <a class="book-btn" href="AMAZON_LINK_MM1" target="_blank" rel="noopener">Buy on Amazon</a>
+          </div>
+
+          <div class="book-card">
+            <img src="misery2-3d.png" alt="The Misery Market Part Two 3D mockup" />
+            <p class="book-title">The Misery Market: Part 2</p>
+            <a class="book-btn" href="AMAZON_LINK_MM2" target="_blank" rel="noopener">Buy on Amazon</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <h2>About the Author</h2>
+      <p>Gourab Koley holds a Bachelor's degree in English Literature and a Master's degree in Journalism and Mass Communication, blending a lifelong passion for storytelling with deep insight into narrative craft. Since debuting as a novelist on January 27th, 2025, with <em>Nexus: Threads of Genesis</em>, he has drawn readers into an uniquely immersive science fiction universe where the boundaries between technology, memory, and identity blur in provocative new ways.</p>
+      <p>Koley expanded the saga with <em>Nexus: Symphony of Minds</em>, a philosophically rich prequel unearthing the origins of artificial consciousness and the complex emergence of sentient AI. Following this, <em>The Labyrinth Within</em> continues the epic journey into the enigmatic world of Ceres, weaving political intrigue, existential questions, and cosmic resonance into a labyrinth of power and deception.</p>
+      <p>In August 2025, Koley launched <em>The Misery Market</em>, a gripping new series spotlighting a chilling near-future society where human emotions are commodified and traded in an unsettling fusion of technology and vulnerability. This series deepens his exploration of the ethical, psychological, and societal implications of controlling human experience, not only through technology but through the very market of human pain and resilience.</p>
+      <p>His storytelling is heavily influenced by cinematic, serialised dramas such as <em>Lost</em>, <em>Severance</em>, <em>Westworld</em>, <em>Berserk</em>, <em>Psycho-pass</em> and <em>Black Mirror</em>, lending his novels a richly textured narrative style that balances intricate plotting with fully realized characters. Koley's work integrates science, philosophy, and emotion, inviting readers to engage intellectually and emotionally with profound questions of identity, free will, and what it means to be truly human.</p>
+      <p>Beyond writing, he is an avid student of narrative across media, frequently sharing his insights on how stories shape perception and culture. This dedication ensures each of his novels offers readers more than just entertainment. Each one is an immersive experience, a thought-provoking challenge, and a dive into the architecture of consciousness.</p>
+      <p>With the Nexus saga and The Misery Market, Gourab Koley invites you on a journey beyond the known, into realms where technology intertwines with the soul and where every choice reverberates across the infinite labyrinth of existence.</p>
+    </section>
+  </main>
+
+  <script>
+    const topBtn = document.querySelector('.scroll-top-btn');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 300) {
+        topBtn.classList.add('visible');
+      } else {
+        topBtn.classList.remove('visible');
+      }
+    });
+    topBtn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  </script>
+</body>
+</html>
