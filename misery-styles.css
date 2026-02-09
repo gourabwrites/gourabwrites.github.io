@@ -497,3 +497,23 @@ footer {
     font-size: 1.8rem !important;
   }
 }
+/* MOBILE: THE MISERY MARKET - Single line, Part 1/2 size */
+@media (max-width: 900px) {
+  .mm-title {
+    margin-top: 50px !important;
+    padding-top: 25px !important;
+    font-size: 2.2rem !important;
+    letter-spacing: 0.15em !important;
+    /* Force single line */
+    white-space: nowrap !important;
+    line-height: 1.1 !important;
+    width: 100% !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .mm-title {
+    margin-top: 60px !important;
+    font-size: 1.8rem !important;
+  }
+}
