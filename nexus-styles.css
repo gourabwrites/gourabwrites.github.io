@@ -413,3 +413,15 @@ header nav a:hover {
   border-radius: 24px;
   transition: box-shadow 0.3s ease;
 }
+/* MOBILE: Smaller back button, up + left */
+@media (max-width: 900px) {
+  header nav {
+    padding-top: 12px !important;  /* Push UP */
+    padding-left: 7px !important; /* Push LEFT */
+  }
+  
+  header nav a {
+    padding: 6px 14px !important;  /* Smaller button */
+    font-size: 0.8rem !important;
+  }
+}
